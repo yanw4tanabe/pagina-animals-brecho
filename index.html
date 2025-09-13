@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animals Brechó - Sua Compra Salva Vidas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .cta-button {
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        .section-fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .section-fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .swiper-button-next, .swiper-button-prev {
+            color: #0d9488; /* Teal-600 */
+        }
+        .swiper-pagination-bullet-active {
+            background-color: #0d9488; /* Teal-600 */
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Cabeçalho -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-teal-600">
+                Animals Brechó 🐾
+            </a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#produtos" class="text-gray-600 hover:text-teal-600">Produtos</a>
+                <a href="#impacto" class="text-gray-600 hover:text-teal-600">Nosso Impacto</a>
+                <a href="#historias" class="text-gray-600 hover:text-teal-600">Histórias</a>
+                <a href="#doar" class="cta-button bg-amber-400 text-white font-bold py-2 px-4 rounded-full hover:bg-amber-500">
+                    Doe Agora
+                </a>
+            </div>
+            <div class="md:hidden">
+                 <a href="#doar" class="cta-button bg-amber-400 text-white font-bold py-2 px-4 rounded-full hover:bg-amber-500">
+                    Doar
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Seção Principal (Hero) -->
+        <section class="relative bg-white">
+            <div class="container mx-auto px-6 py-16 md:py-24 flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 leading-tight mb-4">
+                        Sua compra tem um poder incrível: <span class="text-teal-600">salvar uma vida.</span>
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8">
+                        No Animals Brechó, 100% do lucro de cada peça que você leva para casa é revertido em cuidado, comida e carinho para animais de rua.
+                    </p>
+                    <a href="#produtos" class="cta-button inline-block bg-teal-500 text-white font-bold text-lg py-3 px-8 rounded-full hover:bg-teal-600">
+                        Compre e Ajude
+                    </a>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="imagens/cachorro-feliz1.jpg" alt="Cachorro resgatado feliz" class="rounded-lg shadow-2xl w-full h-auto">
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Produtos -->
+        <section id="produtos" class="py-20 bg-gray-50 section-fade-in">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-2">Nossos Achados com Causa</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto mb-12">Encontre peças únicas e ajude um animal a ter uma segunda chance.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Produto 1 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                        <img src="imagens/roupas.jpeg" alt="Roupas" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Roupas</h3>
+                            <p class="text-gray-600">Peças estilosas para todas as estações.</p>
+                        </div>
+                    </div>
+                    <!-- Produto 2 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                        <img src="imagens/acessorios.jpeg" alt="Acessórios" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Acessórios</h3>
+                            <p class="text-gray-600">Bolsas, sapatos e joias que completam o look.</p>
+                        </div>
+                    </div>
+                    <!-- Produto 3 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                        <img src="imagens/jogos2.jpeg" alt="Jogos" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Jogos e Brinquedos</h3>
+                            <p class="text-gray-600">Itens para trazer diversão individual e em grupo.</p>
+                        </div>
+                    </div>
+                    <!-- Produto 4 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                        <img src="imagens/livros1.jpeg" alt="Livros e outros" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Livros e Outros</h3>
+                            <p class="text-gray-600">Tesouros culturais e utilidades diversas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-12">
+                     <a href="https://www.instagram.com/animals.brecho/" class="cta-button inline-block bg-teal-500 text-white font-bold text-lg py-3 px-8 rounded-full hover:bg-teal-600">
+                        Ver Todos os Produtos
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Impacto Social -->
+        <section id="impacto" class="py-20 bg-teal-600 text-white section-fade-in">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-4">Veja a diferença que você já fez</h2>
+                <p class="max-w-3xl mx-auto mb-12">Cada número representa uma vida transformada com a sua ajuda.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white/20 p-8 rounded-lg">
+                        <h3 class="text-5xl font-bold mb-2" data-target="582">0</h3>
+                        <p class="text-lg">Animais Resgatados</p>
+                    </div>
+                    <div class="bg-white/20 p-8 rounded-lg">
+                        <h3 class="text-5xl font-bold mb-2" data-target="3120">0</h3>
+                        <p class="text-lg">Quilos de Ração Doados</p>
+                    </div>
+                    <div class="bg-white/20 p-8 rounded-lg">
+                        <h3 class="text-5xl font-bold mb-2" data-target="415">0</h3>
+                        <p class="text-lg">Castrações Realizadas</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Histórias Reais -->
+        <section id="historias" class="py-20 bg-white section-fade-in">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12">Histórias que aquecem o coração</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                    <!-- História 1 -->
+                    <div class="flex flex-col items-center text-center">
+                        <img src="imagens/caramelo.jpg" alt="Cachorro Caramelo" class="w-48 h-48 rounded-full object-cover mb-4 shadow-lg">
+                        <h3 class="text-xl font-bold text-teal-600">Caramelo</h3>
+                        <p class="text-gray-600 mt-2">"Encontrado muito debilitado, hoje Caramelo é o cão mais feliz e brincalhão do seu novo lar. Tudo graças a doações que custearam seu tratamento."</p>
+                    </div>
+                    <!-- História 2 -->
+                    <div class="flex flex-col items-center text-center">
+                        <img src="imagens/gatinho2.jpg" alt="Gata Luna" class="w-48 h-48 rounded-full object-cover mb-4 shadow-lg">
+                        <h3 class="text-xl font-bold text-teal-600">Luna</h3>
+                        <p class="text-gray-600 mt-2">"Luna foi resgatada com seus filhotes. As compras no brechó garantiram um lar seguro para todos eles crescerem saudáveis até serem adotados."</p>
+                    </div>
+                    <!-- História 3 -->
+                    <div class="flex flex-col items-center text-center">
+                        <img src="imagens/thor.jpg" alt="Cachorro Thor" class="w-48 h-48 rounded-full object-cover mb-4 shadow-lg">
+                        <h3 class="text-xl font-bold text-teal-600">Thor</h3>
+                        <p class="text-gray-600 mt-2">"Thor precisava de um lar temporário e alguns medicamentos. O lar e os medicamentos foram pagos com a venda de itens do nosso bazar."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Seção Carrossel do Bazar -->
+        <section id="bazar-fotos" class="py-20 bg-gray-50 section-fade-in">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12">Um Pouco do Nosso Espaço</h2>
+                <!-- Swiper -->
+                <div class="swiper-container h-96 rounded-lg shadow-xl">
+                    <div class="swiper-wrapper">
+                        <!-- 20 Slides de Imagens -->
+                        <div class="swiper-slide"><img src="imagens/fachada1.jpeg" class="w-full h-full object-cover" alt="Foto do bazar 1"></div>
+                        <div class="swiper-slide"><img src="imagens/fachada2.jpeg" class="w-full h-full object-cover" alt="Foto do bazar 2"></div>
+                        <div class="swiper-slide"><img src="imagens/frente1.jpeg" class="w-full h-full object-cover" alt="Foto do bazar 3"></div>
+                        <div class="swiper-slide"><img src="imagens/interior1.jpeg" class="w-full h-full object-cover" alt="Foto do bazar 4"></div>
+                        <div class="swiper-slide"><img src="imagens/interior3.jpeg" class="w-full h-full object-cover" alt="Foto do bazar 5"></div>
+                        <div class="swiper-slide"><img src="imagens/interior4.jpeg" class="w-full h-full object-cover" alt="Foto do bazar 6"></div>
+                        <div class="swiper-slide"><img src="imagens/interior5.jpeg" class="w-full h-full object-cover" alt="Foto do bazar 7"></div>
+                        <div class="swiper-slide"><img src="imagens/interior6.jpeg" class="w-full h-full object-cover" alt="Foto do bazar 8"></div>
+                        <div class="swiper-slide"><img src="imagens/interior7.jpeg" class="w-full h-full object-cover" alt="Foto do bazar 9"></div>
+                        <div class="swiper-slide"><img src="imagens/interior9.jpeg" class="w-full h-full object-cover" alt="Foto do bazar 10"></div>
+                        <div class="swiper-slide"><img src="imagens/interior10.jpeg" class="w-full h-full object-cover" alt="Foto do bazar 11"></div>
+                        <div class="swiper-slide"><img src="imagens/interior11.jpeg" class="w-full h-full object-cover" alt="Foto do bazar 12"></div>
+                        <div class="swiper-slide"><img src="imagens/interior12.jpeg" class="w-full h-full object-cover" alt="Foto do bazar 13"></div>
+                        <div class="swiper-slide"><img src="imagens/interior13.jpeg" class="w-full h-full object-cover" alt="Foto do bazar 14"></div>
+                        <div class="swiper-slide"><img src="imagens/interior14.jpeg" class="w-full h-full object-cover" alt="Foto do bazar 15"></div>
+                        <div class="swiper-slide"><img src="imagens/interior15.jpeg" class="w-full h-full object-cover" alt="Foto do bazar 16"></div>
+                        <div class="swiper-slide"><img src="imagens/interior16.jpeg" class="w-full h-full object-cover" alt="Foto do bazar 17"></div>
+                        <div class="swiper-slide"><img src="imagens/interior17.jpeg" class="w-full h-full object-cover" alt="Foto do bazar 18"></div>
+                        <div class="swiper-slide"><img src="imagens/interior19.jpeg" class="w-full h-full object-cover" alt="Foto do bazar 19"></div>
+                        <div class="swiper-slide"><img src="imagens/interior20.jpeg" class="w-full h-full object-cover" alt="Foto do bazar 20"></div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- Add Navigation -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Doações Extras -->
+        <section id="doar" class="bg-amber-400 section-fade-in">
+            <div class="container mx-auto px-6 py-20 text-center">
+                <h2 class="text-3xl font-bold text-white mb-4">Quer ajudar ainda mais?</h2>
+                <p class="text-lg text-white max-w-2xl mx-auto mb-8">
+                    Sua doação direta nos permite agir rapidamente em resgates de emergência e comprar medicamentos essenciais. Cada real faz uma enorme diferença.
+                </p>
+                <a href="https://www.instagram.com/animals.brecho/" class="cta-button inline-block bg-white text-amber-500 font-bold text-xl py-4 px-10 rounded-full hover:bg-gray-100">
+                    Quero Doar Agora
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Animals Brechó</h3>
+                    <p class="text-gray-400">Transformando peças de segunda mão em segundas chances para animais de rua.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contato</h3>
+                    <ul class="text-gray-400 space-y-2">
+                        <li>Email: <a href="mailto:contato@animalsbrecho.com" class="hover:text-teal-400">contato@animalsbrecho.com</a></li>
+                        <li>Whatsapp: <a href="https://api.whatsapp.com/send?phone=556182709027" class="hover:text-teal-400">(61) 98270-9027</a></li>
+                        <li>Quadra 8, Bloco 11, Loja 08 - Sobradinho - Distrito Federal (Ao lado da Ótica Stelamares)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Siga-nos</h3>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <a href="https://www.facebook.com/elvira.maria.9465" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                        </a>
+                        <a href="https://www.instagram.com/animals.brecho/" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.012 3.584-.07 4.85c-.148 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.85s.012-3.584.07-4.85C2.25 3.854 3.726 2.31 6.978 2.163 8.244 2.175 8.622 2.163 12 2.163zm0 1.626c-3.226 0-3.623.012-4.886.07-2.723.123-4.002 1.41-4.125 4.125-.058 1.263-.07 1.66-.07 4.886s.012 3.623.07 4.886c.123 2.714 1.402 4.002 4.125 4.125 1.263.058 1.66.07 4.886.07s3.623-.012 4.886-.07c2.723-.123 4.002-1.411 4.125-4.125.058-1.263.07-1.66.07-4.886s-.012-3.623-.07-4.886c-.123-2.714-1.402-4.002-4.125-4.125-1.263-.058-1.66-.07-4.886-.07zm0 2.88c-2.434 0-4.402 1.968-4.402 4.402s1.968 4.402 4.402 4.402 4.402-1.968 4.402-4.402-1.968-4.402-4.402-4.402zm0 7.182c-1.536 0-2.782-1.246-2.782-2.782s1.246-2.782 2.782-2.782 2.782 1.246 2.782 2.782-1.246 2.782-2.782 2.782zm5.113-7.51c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-700 pt-6 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 Animals Brechó. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Script para animar os contadores de impacto
+        const counters = document.querySelectorAll('[data-target]');
+        const speed = 200; // a velocidade pode ser ajustada
+
+        const animateCounter = (counter) => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+            const inc = target / speed;
+
+            if (count < target) {
+                counter.innerText = Math.ceil(count + inc);
+                setTimeout(() => animateCounter(counter), 10);
+            } else {
+                counter.innerText = target;
+            }
+        };
+
+        // Script para animar seções ao rolar a página
+        const sections = document.querySelectorAll('.section-fade-in');
+
+        const sectionObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    if(entry.target.id === 'impacto'){
+                         counters.forEach(animateCounter);
+                    }
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach(section => {
+            sectionObserver.observe(section);
+        });
+
+    </script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 30,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+            }
+        });
+    </script>
+
+</body>
+</html>
+
